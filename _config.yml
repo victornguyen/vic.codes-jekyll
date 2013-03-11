@@ -1,4 +1,4 @@
 auto:       true
 pygents:    true
-permalink:  /blog/:title
+permalink:  /:categories/:title
 exclude:    ['victornguyen.net.sublime-project', 'victornguyen.net.sublime-workspace', 'component.json']
