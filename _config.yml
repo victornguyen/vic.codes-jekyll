@@ -1,4 +1,3 @@
-auto:       true
 pygents:    true
 permalink:  /:categories/:title
 exclude:    ['victornguyen.net.sublime-project', 'victornguyen.net.sublime-workspace', 'component.json']
