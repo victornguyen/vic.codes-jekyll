@@ -1,14 +1,20 @@
 require 'rubygems'
 require 'rake'
 
-task :default => :server
+task :default => :dev
 
 desc 'Build and start server with --auto'
-task :server do
-  sh 'jekyll --server --auto'
+task :dev do
+  sh 'jekyll serve --watch'
 end
 
 desc 'Build website'
 task :build do
-  sh 'jekyll'
+  sh 'jekyll build'
+end
+
+desc 'Build website for deployment'
+task :deploy do
+  sh 'jekyll build'
+  sh 'grunt'
 end
