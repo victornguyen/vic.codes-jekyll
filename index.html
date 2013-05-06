@@ -1,35 +1,59 @@
 ---
-layout: default
-title: Victor Nguyen - Frontend Developer from Melbourne, Australia
+layout:     default
+title:      Victor Nguyen - Frontend Developer from Melbourne, Australia
+
+intro:      I work at [Igloo](http://www.igloo.com.au). in Melbourne, Australia as the "Frontend Development Manager". That means in addition to writing code, I do a lot of paperwork.
+
+
+            I've been on the Internet for a long time. I love what I do. And I really do look like that drawing up there.
 ---
 
-<section>
-    <h2>Blog</h2>
+<div id="splash">
 
-    {% for post in site.categories.blog limit: 2  %}
+    <img src="/assets/img/avatar.png" width="90" height="193" id="avatar">
+    <h1>{{ site.me.name }}</h1>
+    <h2>{{ site.me.title }}</h2>
 
-        <article>
-            <header>
-              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-              <p class="date">{{ post.date | date_to_string }}</p>
-            </header>
-            <section>{{ post.description }}</section>
-        </article>
+    {{ page.intro | markdownify }}
 
-    {% endfor %}
-</section>
+    <a class="icon-link" href="http://twitter.com/victornguyen"><span aria-hidden="true" class="icon-twitter"></span></a>
+    <a class="icon-link" href="http://github.com/victornguyen"><span aria-hidden="true" class="icon-github"></span></a>
+    <a class="icon-link" href="http://au.linkedin.com/in/therealvictornguyen/"><span aria-hidden="true" class="icon-linkedin"></span></a>
+    <a class="icon-link" href="mailto:vic.nguyen@gmail.com"><span aria-hidden="true" class="icon-mail"></span></a>
+</div>
 
-<section>
-    <h2>Projects</h2>
 
-    {% for project in site.categories.projects limit: 2  %}
+{% comment %}
 
-        <article>
-            <header>
-              <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
-            </header>
-            <section>{{ project.description }}</section>
-        </article>
+    <section>
+        <h2>Blog</h2>
 
-    {% endfor %}
-</section>
+        {% for post in site.categories.blog limit: 2  %}
+
+            <article>
+                <header>
+                  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                  <p class="date">{{ post.date | date_to_string }}</p>
+                </header>
+                <section>{{ post.description }}</section>
+            </article>
+
+        {% endfor %}
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+
+        {% for project in site.categories.projects limit: 2  %}
+
+            <article>
+                <header>
+                  <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+                </header>
+                <section>{{ project.description }}</section>
+            </article>
+
+        {% endfor %}
+    </section>
+
+{% endcomment %}

@@ -3,7 +3,7 @@
 <head>
     <title>{{ page.title }}</title>
     <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
-    <meta name="author" content="Victor Nguyen">
+    <meta name="author" content="{{ site.me.name }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     {% comment %}
     <link rel="stylesheet" type="text/css" href="/components/normalize-css/normalize.css">
@@ -155,33 +155,19 @@
 </head>
 <body>
 
-    <div id="splash">
-        
-        <img src="/assets/img/avatar.png" width="90" height="193" id="avatar">
-        <h1>Victor Nguyen</h1>
-        <h2>Frontend Developer</h2>
-
-        <p>I work at <a href="http://www.igloo.com.au">Igloo</a> in Melbourne, Australia as the &quot;Frontend Development Manager&quot;. That means in addition to writing code, I do a lot of paperwork.</p>
-        <p>I've been on the Internet for a long time. I love what I do. And I really do look like that drawing up there.</p>
-        
-        <a class="icon-link" href="http://twitter.com/victornguyen"><span aria-hidden="true" class="icon-twitter"></span></a>
-        <a class="icon-link" href="http://github.com/victornguyen"><span aria-hidden="true" class="icon-github"></span></a>
-        <a class="icon-link" href="http://au.linkedin.com/in/therealvictornguyen/"><span aria-hidden="true" class="icon-linkedin"></span></a>
-        <a class="icon-link" href="mailto:vic.nguyen@gmail.com"><span aria-hidden="true" class="icon-mail"></span></a>
-    </div>
-
-
     {% comment %}
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/projects/">Projects</a>
-    </nav>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/projects/">Projects</a>
+        </nav>
 
-    <section>
-        {{ content }}
-    </section>
+        <section>
+            {{ content }}
+        </section>
     {% endcomment %}
+
+    {{ content }}
 
     {% include analytics.html %}
 
