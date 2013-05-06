@@ -1,3 +1,4 @@
-pygents:    true
-permalink:  /:categories/:title
-exclude:    ['victornguyen.net.sublime-project', 'victornguyen.net.sublime-workspace', 'component.json']
+pygents:        true
+permalink:      /:categories/:title
+exclude:        ['victornguyen.net.sublime-project', 'victornguyen.net.sublime-workspace', 'component.json']
+analytics_id:   UA-40566813-1
