@@ -1,0 +1,146 @@
+@import "compass/reset";
+@import "compass/css3";
+
+
+$yellow: #e6d7b3;
+$green: #5c832f;
+
+
+@include font-face("icons", font-files("/assets/fonts/icons.eot", "/assets/fonts/icons.woff", "/assets/fonts/icons.ttf", "/assets/fonts/icons.svg"));
+
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+    Instead of a list of all class selectors,
+    you can use the generic selector below, but it's slower:
+    [class*="icon-"] {
+*/
+.icon-github, .icon-twitter, .icon-linkedin, .icon-mail {
+    font-family: 'icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-github:before {
+    content: "\e001";
+}
+.icon-twitter:before {
+    content: "\e002";
+}
+.icon-linkedin:before {
+    content: "\e004";
+}
+.icon-mail:before {
+    content: "\e005";
+}
+
+body {
+    background: $yellow;
+    font-family: 'PT Serif', serif;
+}
+a {
+    color: $green;
+}
+a.icon-link {
+    color: inherit;
+    text-decoration: none;
+    font-size: 36px;
+    display: inline-block;
+    margin-right: 22px;
+}
+a.icon-link:hover {
+    color: $green;
+}
+h1 {
+    font-size: 56px;
+    font-weight: bold;
+    color: #382513;
+    margin: 0 0 0.35em 0;
+    padding: 0;
+}
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: $green;
+    margin: 0 0 0.25em 0;
+    padding: 0;
+}
+p {
+    font-size: 22px;
+    margin: 1em 0;
+    line-height: 1.4em;
+}
+#splash {
+    position: relative;
+    overflow: visible;
+    margin:8% 20% 0 30%;
+    padding-top: 40px;
+}
+#avatar {
+    position: absolute;
+    left: -134px;
+    top: 0;
+    display: block;
+}
+@media only screen and (max-width : 800px) {
+    #splash {
+        margin:6% 15% 0 25%;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width : 600px) {
+    #splash {
+        margin: 3% 10% 0 25%;
+        padding-top: 35px;
+    }
+    #avatar {
+        left: -118px;
+    }
+    h1 {
+        font-size: 44px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width : 599px) {
+    #splash {
+        padding-top: 20px;
+    }
+}
+@media only screen and (max-width : 560px) {
+    #splash {
+        margin:0 5% 0 5%;
+        padding-top: 0;
+    }
+    #avatar {
+        position: relative;
+        left: auto;
+        margin: 0 auto;
+        width: 72px;
+        height: 155px;
+    }
+    h1 {
+        font-size: 38px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
