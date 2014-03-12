@@ -1,0 +1,22 @@
+// media queries
+$xsmall: 320px;
+$small: 560px;
+$medium: 600px;
+$large: 800px;
+
+@mixin at-size($point) {
+    @if $point == small {
+        @media screen and (max-width: $small) { @content; }
+    }
+    @else if $point == medium {
+        @media screen and (max-width: $medium) { @content; }
+    }
+    @else if $point == large {
+        @media screen and (max-width: $large)  { @content; }
+    }
+}
+
+@mixin at-maxwidth($point) {
+    @media screen and (max-width: $point) { @content; }
+}
+

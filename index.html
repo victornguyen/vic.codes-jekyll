@@ -1,11 +1,6 @@
 ---
 layout:     default
 title:      Victor Nguyen - Frontend Developer from Melbourne, Australia
-
-intro:      I work at [Igloo](http://www.igloo.com.au) in Melbourne, Australia as the "Frontend Development Manager". That means in addition to writing code, I do a lot of paperwork.
-
-
-            I've been on the Internet for a long time. I love what I do. And I really do look like that drawing up there.
 ---
 
 <div id="splash">
@@ -14,12 +9,12 @@ intro:      I work at [Igloo](http://www.igloo.com.au) in Melbourne, Australia a
     <h1>{{ site.me.name }}</h1>
     <h2>{{ site.me.title }}</h2>
 
-    {{ page.intro | markdownify }}
+    {% markdown intro.md %}
 
     <a class="icon-link" href="http://twitter.com/victornguyen"><span aria-hidden="true" class="icon-twitter"></span></a>
     <a class="icon-link" href="http://github.com/victornguyen"><span aria-hidden="true" class="icon-github"></span></a>
     <a class="icon-link" href="http://au.linkedin.com/in/therealvictornguyen/"><span aria-hidden="true" class="icon-linkedin"></span></a>
-    <a class="icon-link" href="mailto:vic.nguyen@gmail.com"><span aria-hidden="true" class="icon-mail"></span></a>
+    <a class="icon-link" href="mailto:{{ site.me.email }}"><span aria-hidden="true" class="icon-mail"></span></a>
 </div>
 
 

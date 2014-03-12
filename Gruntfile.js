@@ -5,22 +5,6 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
 
-        uglify: {
-            deploy: {
-                files: {
-                    'js/script-create-pages.min.js': ['js/script-create-pages.js']
-                }
-            }
-        },
-
-        cssmin: {
-            deploy: {
-                files: {
-                    'css/style.min.css': ['css/style.css']
-                }
-            }
-        },
-
         htmlcompressor: {
             deploy: {
                 options: {
@@ -35,35 +19,47 @@ module.exports = function(grunt) {
             }
         },
 
-        htmlmin: {
-            deploy: {
+        watch: {
+            sass: {
+                files: ['assets/**/*.scss'],
+                tasks: ['sass:dev'],
                 options: {
-                    removeComments: true,
-                    collapseWhitespace: true
-                },
-                files: {
-                    '_site/index.html': '_site/index.html'
+                    livereload: true
                 }
             }
         },
 
-        watch: {
-            brochure: {
-                files: ['js/script-create-pages.js', 'css/style.css', 'index.src.html', 'Gruntfile.js'],
-                tasks: ['default']
-            }
+        sass: {
+            options: {
+                loadPath: [
+                    'components/bourbon/dist',
+                    'components/neat/app/assets/stylesheets',
+                    'components/meyer-reset/stylesheets'
+                ]
+            },
+            dist: {
+                files: {
+                    'assets/css/main.css': 'assets/scss/main.scss'
+                },
+                options: {
+                    style: 'compressed'
+                }
+            },
+            dev: {
+                files: {
+                    'assets/css/main.css': 'assets/scss/main.scss'
+                }
+            }     
         }
 
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-htmlcompressor');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
-    // Default task.
-    grunt.registerTask('default', ['htmlcompressor']);
+    // Prod build task
+    grunt.registerTask('default', ['sass:dist','htmlcompressor']);
 
 };

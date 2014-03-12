@@ -16,5 +16,6 @@ end
 desc 'Build website for deployment'
 task :deploy do
   sh 'jekyll build'
+  sh 'compass compile -e production --force'
   sh 'grunt'
 end
