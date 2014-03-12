@@ -37,19 +37,30 @@ module.exports = function(grunt) {
                     'components/meyer-reset/stylesheets'
                 ]
             },
+            dev: {
+                files: {
+                    'assets/dist/css/main.css': 'assets/scss/main.scss'
+                }
+            },
             dist: {
                 files: {
-                    'assets/css/main.css': 'assets/scss/main.scss'
+                    'assets/dist/css/main.css': 'assets/scss/main.scss'
                 },
                 options: {
                     style: 'compressed'
                 }
-            },
-            dev: {
-                files: {
-                    'assets/css/main.css': 'assets/scss/main.scss'
-                }
-            }     
+            }  
+        },
+
+        imagemin: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'assets/dist/img/'
+                }]
+            }
         }
 
     });
@@ -58,8 +69,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-htmlcompressor');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     // Prod build task
-    grunt.registerTask('default', ['sass:dist','htmlcompressor']);
+    grunt.registerTask('default', ['imagemin', 'sass:dist', 'htmlcompressor']);
 
 };
