@@ -3,9 +3,9 @@ require 'rake'
 
 task :default => :dev
 
-desc 'Build and start server with --auto'
+desc 'Build and start server with watch'
 task :dev do
-  sh 'jekyll serve --watch'
+  sh 'jekyll serve'
 end
 
 desc 'Build website'
