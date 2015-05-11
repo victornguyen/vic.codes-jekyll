@@ -1,5 +1,6 @@
-// Icons from IconMoon
+@import "../components/bourbon/dist/_bourbon.scss";
 
+// Icons from IconMoon
 @include font-face(icons, "/assets/fonts/icons");
 
 /* Use the following CSS code if you want to have a class per icon */

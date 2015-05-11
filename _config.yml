@@ -9,3 +9,7 @@ me:
     name:       Victor Nguyen
     email:      vic.nguyen@gmail.com
     title:      Frontend Developer
+
+sass:
+    sass_dir:   _sass
+    style:      compressed
