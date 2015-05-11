@@ -29,29 +29,6 @@ module.exports = function(grunt) {
             }
         },
 
-        sass: {
-            options: {
-                loadPath: [
-                    'components/bourbon/dist',
-                    'components/neat/app/assets/stylesheets',
-                    'components/meyer-reset/stylesheets'
-                ]
-            },
-            dev: {
-                files: {
-                    'assets/dist/css/main.css': 'assets/css/main.css'
-                }
-            },
-            dist: {
-                files: {
-                    'assets/dist/css/main.css': 'assets/css/main.css'
-                },
-                options: {
-                    style: 'compressed'
-                }
-            }  
-        },
-
         imagemin: {
             dist: {
                 files: [{
@@ -72,6 +49,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     // Prod build task
-    grunt.registerTask('default', ['imagemin', 'sass:dist', 'htmlcompressor']);
+    grunt.registerTask('default', ['imagemin', 'htmlcompressor']);
 
 };
