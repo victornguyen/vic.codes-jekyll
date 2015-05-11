@@ -11,5 +11,7 @@ me:
     title:      Frontend Developer
 
 sass:
-    sass_dir:   _sass
+    load_paths:
+        - _sass
+        - components
     style:      compressed
