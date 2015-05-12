@@ -1,7 +1,7 @@
 // vendor
-@import "../components/meyer-reset/stylesheets/_meyer-reset.scss";
-@import "../components/bourbon/dist/_bourbon.scss";
-@import "../components/neat/app/assets/stylesheets/_neat.scss";
+@import "../assets/components/meyer-reset/stylesheets/_meyer-reset";
+@import "../assets/components/bourbon/app/assets/stylesheets/bourbon";
+@import "../assets/components/neat/app/assets/stylesheets/_neat";
 
 // modules
 @import "modules/mixins";
