@@ -1,9 +1,17 @@
 language: ruby
 rvm:
-  - 1.9.3
-before_script:
-  - npm install -g bower
-  - bower install
-script: bundle exec jekyll build
+- 1.9.3
 install: bundle install
-after_success: bundle exec s3_website push --headless
+before_script:
+- npm install -g bower
+- bower install
+script: bundle exec jekyll build
+deploy:
+  provider: s3
+  access_key_id: $S3_ACCESS_KEY_ID
+  secret_access_key: $S3_SECRET_KEY
+  bucket: victornguyen.net
+  local-dir: _site
+  acl: public_read
+  on:
+    repo: victornguyen/victornguyen.net
