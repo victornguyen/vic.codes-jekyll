@@ -1,6 +1,6 @@
 pygents:        true
 permalink:      /:categories/:title
-exclude:        ['Rakefile', 'victornguyen.net.sublime-project', 'victornguyen.net.sublime-workspace', 'bower.json', 'package.json', 'node_modules', 'Gruntfile.js']
+exclude:        ['Rakefile', 'victornguyen.net.sublime-project', 'victornguyen.net.sublime-workspace', 'bower.json', 'package.json', 'node_modules', 'Gruntfile.js', 'Gemfile', 'Gemfile.lock']
 analytics_id:   UA-40566813-1
 encoding:       utf-8
 markdown:       kramdown
