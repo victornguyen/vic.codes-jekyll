@@ -11,6 +11,8 @@ deploy:
   access_key_id: $S3_ACCESS_KEY_ID
   secret_access_key: $S3_SECRET_KEY
   bucket: victornguyen.net
+  endpoint: victornguyen.net.s3-website-ap-southeast-2.amazonaws.com
+  region: ap-southeast-2
   local-dir: _site
   acl: public_read
   skip_cleanup: true
