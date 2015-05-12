@@ -13,5 +13,6 @@ deploy:
   bucket: victornguyen.net
   local-dir: _site
   acl: public_read
+  skip_cleanup: true
   on:
     repo: victornguyen/victornguyen.net
