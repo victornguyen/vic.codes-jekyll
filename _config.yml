@@ -4,6 +4,7 @@ exclude:        ['Rakefile', 'victornguyen.net.sublime-project', 'victornguyen.n
 analytics_id:   UA-40566813-1
 encoding:       utf-8
 markdown:       kramdown
+url:            http://vic.codes
 
 me:
     name:       Victor Nguyen
