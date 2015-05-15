@@ -2,6 +2,11 @@
 
 module.exports = function(grunt) {
 
+    grunt.loadNpmTasks('grunt-htmlcompressor');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-svgstore');
+
     // Project configuration.
     grunt.initConfig({
 
@@ -38,16 +43,30 @@ module.exports = function(grunt) {
                     dest: 'assets/dist/img/'
                 }]
             }
+        },
+
+        svgstore: {
+            options: {
+                cleanup: ['fill'],
+                prefix: 'icon-',
+                svg: {
+                    xmlns:      'http://www.w3.org/2000/svg',
+                    display:    'none'
+                }
+            },
+            default: {
+                files: {
+                    '_includes/social-icons.svg': ['assets/svg/*.svg']
+                }
+            }
         }
 
     });
 
-    // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-htmlcompressor');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-
     // Prod build task
-    grunt.registerTask('default', ['imagemin', 'htmlcompressor']);
+    grunt.registerTask('default', ['htmlcompressor', 'imagemin']);
+    
+    // SVG sprite task
+    grunt.registerTask('svg', ['svgstore']);
 
 };
