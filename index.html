@@ -5,11 +5,13 @@ title:      Victor Nguyen - Front-end Developer from Melbourne, Australia
 
 <div class="splash">
 
-    <img src="/assets/dist/img/avatar.png" width="90" height="193" class="avatar">
+    <img src="/assets/dist/img/avatar.png" width="90" height="193" class="splash__avatar">
     <h1>{{ site.me.name }}</h1>
     <h2>{{ site.me.title }}</h2>
 
-    {% markdown intro.md %}
+    <div class="splash__intro">
+        {% markdown intro.md %}
+    </div>
     
     {% include social-links.html %}
     
