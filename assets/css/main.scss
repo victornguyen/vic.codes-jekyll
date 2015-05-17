@@ -4,6 +4,8 @@
 // base
 @import "partials/base";
 
+@import "partials/social-links";
+
 
 body {
     background: $yellow;
@@ -17,23 +19,6 @@ a {
 em {
     font-style: italic;
 }
-
-.icon-link {
-    display: inline-block;
-    margin-right: 22px;
-    &:hover {
-        .icon {
-            fill: $green;
-        }
-    }
-}
-
-.icon {
-    display: inline-block;
-    height: 46px;
-    width: 46px;
-}
-
 
 h1 {
     font-size: 56px;

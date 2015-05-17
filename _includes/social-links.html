@@ -1,0 +1,13 @@
+{% include social-icons.svg %}
+
+<ul class="social-links__list">
+    {% for link in site.data.social-links %}
+        <li class="social-links__item">
+            <a class="social-links__link" href="{{ link.url }}" title="{{ link.title }}">
+                <svg class="social-links__icon">
+                    <use xlink:href="#icon-{{ link.icon }}"></use>
+                </svg>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

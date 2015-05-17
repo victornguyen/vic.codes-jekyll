@@ -1,0 +1,19 @@
+.social-links__item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-links__link {
+    display: inline-block;
+    &:hover {
+        .social-links__icon {
+            fill: $green;
+        }
+    }
+}
+
+.social-links__icon {
+    display: inline-block;
+    height: 46px;
+    width: 46px;
+}

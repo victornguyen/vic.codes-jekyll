@@ -3,8 +3,6 @@ layout:     default
 title:      Victor Nguyen - Frontend Developer from Melbourne, Australia
 ---
 
-{% include social-icons.svg %}
-
 <div id="splash">
 
     <img src="/assets/dist/img/avatar.png" width="90" height="193" id="avatar">
@@ -12,27 +10,9 @@ title:      Victor Nguyen - Frontend Developer from Melbourne, Australia
     <h2>{{ site.me.title }}</h2>
 
     {% markdown intro.md %}
-
-    <a class="icon-link" href="http://twitter.com/victornguyen">
-        <svg class="icon">
-            <use xlink:href="#icon-twitter"></use>
-        </svg>
-    </a>
-    <a class="icon-link" href="http://github.com/victornguyen">
-        <svg class="icon">
-            <use xlink:href="#icon-github"></use>
-        </svg>
-    </a>
-    <a class="icon-link" href="http://au.linkedin.com/in/therealvictornguyen/">
-        <svg class="icon icon--linkedin">
-            <use xlink:href="#icon-linkedin"></use>
-        </svg>
-    </a>
-    <a class="icon-link" href="mailto:{{ site.me.email }}">
-        <svg class="icon">
-            <use xlink:href="#icon-email"></use>
-        </svg>
-    </a>
+    
+    {% include social-links.html %}
+    
 </div>
 
 
