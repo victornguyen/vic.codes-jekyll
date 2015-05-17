@@ -1,6 +1,9 @@
 .social-links__item {
     display: inline-block;
     margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .social-links__link {
