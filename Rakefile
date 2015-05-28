@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'rake'
+require 'html/proofer'
 
 task :default => :dev
 
@@ -16,5 +17,8 @@ end
 desc 'Build website for deployment'
 task :deploy do
   sh 'jekyll build'
-  sh 'grunt'
+  HTML::Proofer.new("./_site/index.html", {
+    :only_4xx => true,
+    :check_html => true
+  }).run
 end
