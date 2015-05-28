@@ -5,7 +5,7 @@ install: bundle install
 before_script:
 - npm install -g bower
 - bower install
-script: bundle exec jekyll deploy
+script: bundle exec rake deploy
 deploy:
   provider: s3
   access_key_id: $S3_ACCESS_KEY_ID
