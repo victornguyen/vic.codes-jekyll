@@ -2,7 +2,7 @@
 *.sublime-project
 *.sublime-workspace
 /node_modules/
-/assets/components/
+/assets/bower/
 /_site/
 .sass-cache
 .idea

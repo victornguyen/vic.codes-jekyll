@@ -12,6 +12,14 @@ me:
     title:      Frontend Developer
     desc:       "Victor Nguyen is a pretty good web developer from Melbourne, Australia."
 
+gems:
+    - jekyll-autoprefixer
+
 sass:
     sass_dir:   _sass
     style:      compressed
+
+autoprefixer:
+    browsers:
+        - last 2 versions
+        - IE > 9
