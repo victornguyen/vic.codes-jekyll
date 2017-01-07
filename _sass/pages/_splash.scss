@@ -1,0 +1,115 @@
+h1 {
+    font-size: 56px;
+    font-weight: bold;
+    color: $brown;
+    margin: 0 0 0.35em 0;
+    padding: 0;
+    @include at-size(large) {
+        font-size: 48px;
+    }
+    @include at-size(medium) {
+        font-size: 44px;
+    }
+    @include at-size(small) {
+        font-size: 38px;
+        text-align: center;
+    }
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: $green;
+    margin: 0 0 1em 0;
+    padding: 0;
+    @include at-size(large) {
+        font-size: 24px;
+    }
+    @include at-size(medium) {
+        font-size: 22px;
+    }
+    @include at-size(small) {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+p {
+    font-size: 22px;
+    margin: 1em 0;
+    line-height: 1.4em;
+    @include at-size(large) {
+        font-size: 20px;
+    }
+    @include at-size(medium) {
+        font-size: 18px;
+    }
+}
+
+.splash {
+    position: relative;
+    overflow: visible;
+    margin:6% 25% 0 30%;
+    padding-top: 40px;
+    @include at-size(large) {
+        margin:6% 15% 0 25%;
+    }
+    @include at-size(medium) {
+        margin: 3% 10% 0 25%;
+        padding-top: 35px;
+    }
+    @include at-maxwidth(599px) {
+        padding-top: 20px;
+    }
+    @include at-size(small) {
+        margin:0 5% 0 5%;
+        padding-top: 0;
+    }
+}
+
+.splash__intro {
+    padding-bottom: 8px;
+    a {
+        text-decoration: none;
+        position: relative;
+        padding: 0 0 2px 0;
+
+        &:after {
+            @include transition(all 0.15s ease);
+            @include transform(scaleX(0));
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            visibility: hidden;
+            background-color: $green;
+        }
+
+        &:hover {
+            &:after {
+                @include transform(scaleX(1));
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.splash__avatar {
+    position: absolute;
+    left: -134px;
+    top: 0;
+    display: block;
+    @include at-size(medium) {
+        left: -118px;
+    }
+    @include at-size(small) {
+        position: relative;
+        left: auto;
+        margin: 0 auto;
+        width: 72px;
+        height: 155px;
+    }
+}
+
