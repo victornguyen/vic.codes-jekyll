@@ -17,5 +17,5 @@ end
 desc 'Build website for deployment'
 task :deploy do
   sh 'jekyll build'
-  HTMLProofer.check_file("./_site/index.html").run
+  HTMLProofer.check_file("./_site/index.html", http_status_ignore: [999]).run
 end
