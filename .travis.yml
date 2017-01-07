@@ -1,22 +1,22 @@
 language: ruby
 rvm:
-- 2.4.0
+  - 2.4.0
 install: bundle install
 before_script:
-- npm install -g bower
-- bower install
+  - npm install -g bower
+  - bower install
 script: bundle exec rake deploy
 deploy:
   provider: s3
   access_key_id: $S3_ACCESS_KEY_ID
   secret_access_key: $S3_SECRET_KEY
   bucket: vic.codes
-  endpoint: vic.codes.s3-website-ap-southeast-2.amazonaws.com
   region: ap-southeast-2
   local-dir: _site
   acl: public_read
   skip_cleanup: true
   on:
+    branch: master
     repo: victornguyen/vic.codes
 notifications:
   slack:
