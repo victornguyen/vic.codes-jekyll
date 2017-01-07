@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 1.9.3
+- 2.4.0
 install: bundle install
 before_script:
 - npm install -g bower
