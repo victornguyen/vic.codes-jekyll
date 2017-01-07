@@ -17,9 +17,5 @@ end
 desc 'Build website for deployment'
 task :deploy do
   sh 'jekyll build'
-  HTML::Proofer.new("./_site/index.html", {
-    :only_4xx => true,
-    :check_html => true,
-    :empty_alt_ignore => true
-  }).run
+  HTMLProofer.check_file("./_site/index.html").run
 end
