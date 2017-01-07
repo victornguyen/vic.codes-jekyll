@@ -1,24 +1,17 @@
 ---
 ---
 
-// base
-@import "partials/base";
+@import "../assets/components/meyer-reset/stylesheets/_meyer-reset";
+@import "../assets/components/bourbon/app/assets/stylesheets/bourbon";
+@import "../assets/components/neat/app/assets/stylesheets/_neat";
 
-@import "partials/social-links";
+@import "abstracts/mixins";
+@import "abstracts/colours";
 
+@import "base/base";
 
-body {
-    background: $yellow;
-    font-family: 'PT Serif', $georgia;
-}
+@import "components/social-links";
 
-a {
-    color: $green;
-}
-
-em {
-    font-style: italic;
-}
 
 h1 {
     font-size: 56px;
