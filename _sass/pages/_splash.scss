@@ -75,8 +75,6 @@ p {
         padding: 0 0 2px 0;
 
         &:after {
-            @include transition(all 0.15s ease);
-            @include transform(scaleX(0));
             content: '';
             position: absolute;
             height: 2px;
@@ -85,12 +83,14 @@ p {
             bottom: 0;
             visibility: hidden;
             background-color: $green;
+            transition: all 0.15s ease;
+            transform: scaleX(0);
         }
 
         &:hover {
             &:after {
-                @include transform(scaleX(1));
                 visibility: visible;
+                transform: scaleX(1);
             }
         }
     }
