@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'rake'
-require 'html/proofer'
+require 'html-proofer'
 
 task :default => :dev
 
