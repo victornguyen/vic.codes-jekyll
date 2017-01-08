@@ -10,3 +10,6 @@ gem "html-proofer"
 
 # Markdown
 gem "redcarpet"
+
+# Syntax highlighting
+gem "pygments.rb"

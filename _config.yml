@@ -9,7 +9,13 @@ analytics_id: UA-40566813-1
 permalink: /:categories/:title
 pygents: true
 encoding: utf-8
-markdown: kramdown
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions:
+  - fenced_code_blocks
+  - autolink
+  - strikethrough
 
 exclude:
 - Rakefile
@@ -23,13 +29,6 @@ exclude:
 
 gems:
 - jekyll-autoprefixer
-
-markdown: redcarpet
-redcarpet:
-  extensions:
-  - fenced_code_blocks
-  - autolink
-  - strikethrough
 
 sass:
   sass_dir: _sass
