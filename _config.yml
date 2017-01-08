@@ -21,6 +21,7 @@ exclude:
 - Gruntfile.js
 - Gemfile
 - Gemfile.lock
+- assets/bower
 
 gems:
 - jekyll-autoprefixer
