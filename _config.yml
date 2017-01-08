@@ -13,8 +13,6 @@ markdown: kramdown
 
 exclude:
 - Rakefile
-- vic.codes.sublime-project
-- vic.codes.sublime-workspace
 - bower.json
 - package.json
 - node_modules
