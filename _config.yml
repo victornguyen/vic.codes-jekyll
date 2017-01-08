@@ -1,25 +1,35 @@
-pygents:        true
-permalink:      /:categories/:title
-exclude:        ['Rakefile', 'vic.codes.sublime-project', 'vic.codes.sublime-workspace', 'bower.json', 'package.json', 'node_modules', 'Gruntfile.js', 'Gemfile', 'Gemfile.lock']
-analytics_id:   UA-40566813-1
-encoding:       utf-8
-markdown:       kramdown
-url:            https://vic.codes
-
 me:
-    name:       Victor Nguyen
-    email:      vic.nguyen@gmail.com
-    title:      Frontend Developer
-    desc:       "Victor Nguyen is a pretty good web developer from Melbourne, Australia."
+  name: Victor Nguyen
+  email: vic.nguyen@gmail.com
+  title: Frontend Developer
+  desc: "Victor Nguyen is a pretty good web developer from Melbourne, Australia."
+
+url: https://vic.codes
+analytics_id: UA-40566813-1
+permalink: /:categories/:title
+pygents: true
+encoding: utf-8
+markdown: kramdown
+
+exclude:
+- Rakefile
+- vic.codes.sublime-project
+- vic.codes.sublime-workspace
+- bower.json
+- package.json
+- node_modules
+- Gruntfile.js
+- Gemfile
+- Gemfile.lock
 
 gems:
-    - jekyll-autoprefixer
+- jekyll-autoprefixer
 
 sass:
-    sass_dir:   _sass
-    style:      compressed
+  sass_dir: _sass
+  style: compressed
 
 autoprefixer:
-    browsers:
-        - last 2 versions
-        - IE > 9
+  browsers:
+  - last 2 versions
+  - IE > 9
