@@ -9,7 +9,7 @@ permalink: /projects/
 <p>All projects here?</p>
 
 <ul>
-    {% for project in site.categories.projects limit: 2  %}
-        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
-    {% endfor %}
+  {% for project in site.categories.projects limit: 2  %}
+    <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+  {% endfor %}
 </ul>
