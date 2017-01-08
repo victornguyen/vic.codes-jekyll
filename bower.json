@@ -2,6 +2,6 @@
   "name": "vic.codes",
   "version": "0.0.0",
   "dependencies": {
-    "meyer-reset": "latest"
+    "normalize.scss": "latest"
   }
 }
