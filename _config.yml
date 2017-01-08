@@ -24,6 +24,13 @@ exclude:
 gems:
 - jekyll-autoprefixer
 
+markdown: redcarpet
+redcarpet:
+  extensions:
+  - fenced_code_blocks
+  - autolink
+  - strikethrough
+
 sass:
   sass_dir: _sass
   style: compressed

@@ -3,7 +3,7 @@
   Usage:
     {% markdown <filename> %}
   Dependency:
-    - kramdown
+    - redcarpet
 =end
 module Jekyll
   class MarkdownTag < Liquid::Tag
@@ -11,12 +11,17 @@ module Jekyll
       super
       @text = text.strip
     end
-    require "kramdown"
+    require "redcarpet"
     def render(context)
       tmpl = File.read File.join Dir.pwd, "_includes", @text
       site = context.registers[:site]
       tmpl = (Liquid::Template.parse tmpl).render site.site_payload
-      html = Kramdown::Document.new(tmpl).to_html
+      html = Redcarpet::Markdown.new(Redcarpet::Render::HTML, {
+        fenced_code_blocks: true,
+        no_intra_emphasis: true,
+        autolink: true,
+        strikethrough: true
+      }).render tmpl
     end
   end
 end
